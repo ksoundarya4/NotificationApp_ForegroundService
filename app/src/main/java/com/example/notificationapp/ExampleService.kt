@@ -24,8 +24,8 @@ class ExampleService: Service() {
 
         startForeground(1, notification)
 
-        //do heavy work on a background thread
-        //stopSelf();
+        // do heavy work on a background thread
+        stopSelf()
         return START_NOT_STICKY
     }
 

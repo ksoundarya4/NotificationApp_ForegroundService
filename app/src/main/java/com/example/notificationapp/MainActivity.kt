@@ -19,14 +19,14 @@ class MainActivity: AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-    private fun startService(v: View?) {
+    fun startService(view: View) {
         val input = editTextInput!!.text.toString()
         val serviceIntent = Intent(this, ExampleService::class.java)
         serviceIntent.putExtra("inputExtra", input)
         ContextCompat.startForegroundService(this, serviceIntent)
     }
 
-    private fun stopService(v: View?) {
+    fun stopService(view: View) {
         val serviceIntent = Intent(this, ExampleService::class.java)
         stopService(serviceIntent)
     }
